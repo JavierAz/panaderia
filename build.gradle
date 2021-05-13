@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'war'
+    id "org.gretty" version "3.0.4"
 }
 
 group 'mx.ipn.upiicsa'
@@ -8,6 +9,7 @@ version '1.0'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -27,4 +29,10 @@ war.dependsOn explodedWar
 
 test {
     useJUnitPlatform()
+}
+
+gretty {
+    // supported values:
+    // 'jetty7', 'jetty8', 'jetty9', 'jetty9.3', 'jetty9.4', 'tomcat85', 'tomcat9'
+    servletContainer = 'tomcat9'
 }
