@@ -1,5 +1,5 @@
 package vw;
 
-public class Person {
+public abstract class Person {
 
 }
