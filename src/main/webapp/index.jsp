@@ -38,7 +38,7 @@
     </div>
 </nav>
 <div class="jumbotron">
-    <h1 class="display-4">Bienvenido!</h1>
+    <h1 class="display-4">Bienvenido! ${usuario}</h1>
     <p class="lead">Pantalla donde se mostraran los panes y su informacion.</p>
     <hr class="my-4">
     <p>Aún no eres parte de nuestra comunidad?</p>

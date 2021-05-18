@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DataBase {
     private final String jdbcPassword = System.getenv("JDBC_PASSWORD");
     private final String jdbcURL = System.getenv("JDBC_URL");
-    private final String jdbcDriver = System.getenv("JDBC_DRIVER");
+    private final String jdbcDriver = "com.mysql.jdbc.Driver";
     private final String jdbcUser = System.getenv("JDBC_USER");
     Connection connection;
 
@@ -28,7 +28,7 @@ public class DataBase {
         } catch (SQLException sqlE) {
             System.out.println("Error: " + sqlE);
         }
-        return null;
+        return connection;
     }
 
     protected void disconnect() {
