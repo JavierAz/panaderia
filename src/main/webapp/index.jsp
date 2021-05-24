@@ -46,7 +46,6 @@
         <a class="btn btn-primary btn-lg" href="#" role="button">Registrate!</a>
     </p>
 </div>
-<p>Hello, bmi = ${bmi}</p>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

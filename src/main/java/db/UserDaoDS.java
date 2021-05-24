@@ -6,17 +6,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class UserDao extends DataBase {
+public class UserDaoDS {
     private final String findByCredentials = "SELECT * FROM Usuario where usuario = ? AND psw = ?";
 
-    public User findUser(String usuario, String psw) {
+    public User findUser(String usuario, String psw){
         User u = null;
-        try (Connection con = getConnection()) {
-            try (PreparedStatement pst = con.prepareStatement(findByCredentials)) {
+        try(Connection conn = DataSource.getConnection()){
+            try(PreparedStatement pst = conn.prepareStatement(findByCredentials)){
                 pst.setString(1, usuario);
                 pst.setString(2, psw);
-                try (ResultSet rs = pst.executeQuery()) {
-                    if (rs.next()) {
+                try(ResultSet rs = pst.executeQuery()) {
+                    if (rs.next()){
                         u = new User();
                         u.setIdUsuario(rs.getInt("idUsuario"));
                         u.setUsuario(rs.getString("usuario"));
@@ -24,9 +24,8 @@ public class UserDao extends DataBase {
                     }
                 }
             }
-            disconnect();
-        } catch (Exception e) {
-            throw new RuntimeException("Error findByCredentials: ", e);
+        }catch (Exception e){
+            throw new RuntimeException("Error finByUser in UserDaoDS", e);
         }
         return u;
     }

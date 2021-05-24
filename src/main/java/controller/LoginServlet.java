@@ -1,6 +1,6 @@
 package controller;
 
-import db.UserDao;
+import db.UserDaoDS;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,8 +17,9 @@ public class LoginServlet extends HttpServlet {
         System.out.println("pide la conexión");
         String usuario = request.getParameter("usuario");
         String psw = request.getParameter("psw");
+        System.out.println();
 
-        UserDao dao = new UserDao();
+        UserDaoDS dao = new UserDaoDS();
         if (dao.findUser(usuario, psw)!= null){
             //get the old session and invalidate
             HttpSession oldSession = request.getSession(false);
