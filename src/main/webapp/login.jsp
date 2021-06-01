@@ -24,18 +24,20 @@
 <div class="main">
     <div class="col-md-6 col-sm-12">
         <div class="login-form">
-            <form>
+            <form name="LoginServlet" action="LoginServlet" method="post">
                 <div class="form-group">
+                    <p>${error}</p>
                     <label>Usuario</label>
-                    <input type="text" class="form-control" placeholder="Usuario">
+                    <input type="text" class="form-control" placeholder="Usuario" name="usuario">
                 </div>
                 <div class="form-group">
                     <label>Contraseña</label>
-                    <input type="password" class="form-control" placeholder="Contraseña">
+                    <input type="password" class="form-control" placeholder="Contraseña" name="psw">
                 </div>
                 <button type="submit" class="btn btn-black">Entrar</button>
-                <button type="submit" class="btn btn-outline-secondary">Registrarme</button>
             </form>
+            <a href="register.jsp" class="btn btn-outline-secondary">Registrarme</a>
+
         </div>
     </div>
 </div>

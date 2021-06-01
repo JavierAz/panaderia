@@ -21,24 +21,24 @@
         <div class="fadeIn first">
             <h1>Registrarse</h1>
         </div>
-        <form>
+        <form name="RegisterServlet" action="RegisterServlet" method="post">
             <p>Nombre</p>
-            <input type="text" id="#" class="fadeIn second" name="" placeholder="Nombre">
+            <input type="text" id="Nombre" class="fadeIn second" name="Nombre" placeholder="Nombre">
             <p>Apellido Paterno</p>
-            <input type="text" id="#2" class="fadeIn third" name="" placeholder="Apellido Paterno">
+            <input type="text" id="Paterno" class="fadeIn third" name="Paterno" placeholder="Apellido Paterno">
             <p>Apellido Materno</p>
-            <input type="text" id="#3" class="fadeIn third" name="" placeholder="Apellido Materno">
+            <input type="text" id="Materno" class="fadeIn third" name="Materno" placeholder="Apellido Materno">
             <p>CURP</p>
-            <input type="text" id="#4" class="fadeIn third" name="" placeholder="CURP">
+            <input type="text" id="CURP" class="fadeIn third" name="CURP" placeholder="CURP">
             <p>Usuario</p>
-            <input type="text" id="#5" class="fadeIn third" name="" placeholder="Usuario">
+            <input type="text" id="usuario" class="fadeIn third" name="usuario" placeholder="Usuario">
             <p>Contraseña</p>
-            <input type="text" id="#6" class="fadeIn third" name="" placeholder="Contrasena">
+            <input type="text" id="psw" class="fadeIn third" name="psw" placeholder="Contrasena">
 
             <input type="submit" class="fadeIn fourth" value="Registrarme">
         </form>
         <div id="formFooter">
-            <a class="underlineHover" href="#">Cancelar</a>
+            <a class="underlineHover" href="login.jsp">Cancelar</a>
         </div>
     </div>
 </div>
