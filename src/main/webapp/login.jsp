@@ -35,8 +35,9 @@
                     <input type="password" class="form-control" placeholder="Contraseña" name="psw">
                 </div>
                 <button type="submit" class="btn btn-black">Entrar</button>
-                <button type="submit" class="btn btn-outline-secondary">Registrarme</button>
             </form>
+            <a href="register.jsp" class="btn btn-outline-secondary">Registrarme</a>
+
         </div>
     </div>
 </div>

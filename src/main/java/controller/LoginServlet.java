@@ -14,10 +14,8 @@ import java.io.IOException;
 @WebServlet(name="LoginServlet", urlPatterns = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("pide la conexión");
         String usuario = request.getParameter("usuario");
         String psw = request.getParameter("psw");
-        System.out.println();
 
         UserDaoDS dao = new UserDaoDS();
         if (dao.findUser(usuario, psw)!= null){
@@ -32,7 +30,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("index.jsp");
         } else {
             request.setAttribute("error", "credenciales invalidas");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("loginEmployee.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
         }
     }

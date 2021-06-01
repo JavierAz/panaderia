@@ -30,8 +30,8 @@
             <input type="text" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
 
             <input type="submit" class="fadeIn fourth" value="Entrar"><br>
-            <a class="btn btn-outline-primary fadeIn fourth" href="#">Registrarme</a>
-            <a class="btn btn-outline-danger fadeIn fourth" href="">Cancelar</a>
+            <a class="btn btn-outline-primary fadeIn fourth" href="register.jsp">Registrarme</a>
+            <!-- <a class="btn btn-outline-danger fadeIn fourth" href="">Cancelar</a> -->
         </form>
         <!-- Remind Passowrd -->
         <div id="formFooter">

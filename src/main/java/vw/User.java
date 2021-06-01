@@ -4,6 +4,7 @@ public class User extends Person{
     private int idUsuario;
     private String usuario;
     private String psw;
+    private String idUser;
 
     public int getIdUsuario() {
         return idUsuario;
@@ -27,5 +28,13 @@ public class User extends Person{
 
     public void setPsw(String psw) {
         this.psw = psw;
+    }
+
+    public String getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 }

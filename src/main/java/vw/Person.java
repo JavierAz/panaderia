@@ -5,6 +5,7 @@ public class Person {
     private String paterno;
     private String materno;
     private String curp;
+    private int idPersona;
 
     public String getNombre() {
         return nombre;
@@ -36,5 +37,13 @@ public class Person {
 
     public void setCurp(String curp) {
         this.curp = curp;
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
     }
 }
