@@ -9,7 +9,6 @@ public class UserDaoDS {
     private final String findByCredentials = "SELECT * FROM Usuario where usuario = ? AND psw = ?";
     private final String insertPerson = "insert into Persona (Nombre, Paterno, Materno, CURP) VALUES (?, ?, ?, ?)";
     private final String insertUser = "insert into Usuario (IdPersona, usuario, psw) VALUES (?, ?, ?)";
-    private final String getIdPersona = "select IdPersona from Persona where Nombre = ?";
 
     public User findUser(String usuario, String psw) {
         User u = null;
