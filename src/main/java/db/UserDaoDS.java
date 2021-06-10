@@ -9,6 +9,7 @@ public class UserDaoDS {
     private final String findByCredentials = "SELECT * FROM Usuario where usuario = ? AND psw = ?";
     private final String insertPerson = "insert into Persona (Nombre, Paterno, Materno, CURP) VALUES (?, ?, ?, ?)";
     private final String insertUser = "insert into Usuario (IdPersona, usuario, psw) VALUES (?, ?, ?)";
+    private final String findPerson = "select * from Persona";
 
     public User findUser(String usuario, String psw) {
         User u = null;
@@ -19,10 +20,10 @@ public class UserDaoDS {
             if (rs.next()) {
                 u = new User();
                 u.setIdUsuario(rs.getInt("idUsuario"));
-                u.setNombre(rs.getString("Nombre"));
-                u.setPaterno(rs.getString("Paterno"));
-                u.setMaterno(rs.getString("Materno"));
-                u.setCurp(rs.getString("CURP"));
+//                u.setNombre(rs.getString("Nombre"));
+//                u.setPaterno(rs.getString("Paterno"));
+//                u.setMaterno(rs.getString("Materno"));
+//                u.setCurp(rs.getString("CURP"));
                 u.setUsuario(rs.getString("usuario"));
                 u.setPsw(rs.getString("psw"));
             }
